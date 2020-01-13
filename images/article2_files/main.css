@@ -1,0 +1,79 @@
+body {
+  position: absolute;
+  margin: 0;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  background: #FFFFFF url(_preloader.gif) no-repeat center center;
+}
+
+.border {
+  position: absolute;
+  background: #000000;
+}
+
+.border.top {
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+}
+
+.border.bottom {
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+}
+
+.border.left {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+}
+
+.border.right {
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: 'Excellence In Motion V2';
+  font-style: normal;
+  font-weight: normal;
+  src: url(excellence.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Excellence In Motion V2';
+  font-style: normal;
+  font-weight: bold;
+  src: url(excellence_black.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Helios Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url(helios_black_cyr.woff) format('woff');
+}
+
+
+
+/*# sourceMappingURL=main.css.map*/

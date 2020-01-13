@@ -1,0 +1,30 @@
+.tag-html > * {
+    max-width: 280px!important;
+}
+
+@media screen and (min-width: 360px) {
+    .tag-html > * {
+        max-width: 300px!important;
+    }
+}
+.tag-html > * {
+    max-width: 280px!important;
+}
+
+@media screen and (min-width: 768px) {
+    .tag-html > * {
+        max-width: 708px!important;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .tag-html > * {
+        max-width: 620px!important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .tag-html > * {
+        max-width: 674px!important;
+    }
+}

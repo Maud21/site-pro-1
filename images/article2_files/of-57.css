@@ -1,0 +1,283 @@
+/*------------------------------------*\
+   FONTS
+\*------------------------------------*/
+
+@font-face {
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/Oswald-regular.eot');
+  src: url('fonts/Oswald-regular.eot?#iefix') format('embedded-opentype'), url('fonts/Oswald-regular.woff2') format('woff2'), url('fonts/Oswald-regular.woff') format('woff'), url('fonts/Oswald-regular.ttf') format('truetype'), url('fonts/Oswald-regular.svg#Oswald') format('svg');
+}
+
+/*------------------------------------*\
+   FONTS
+\*------------------------------------*/
+
+body {
+  margin: 0!important;
+  background-color: #efefef;
+}
+
+div.contenu {
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+   COL DROITE
+\*------------------------------------*/
+
+#multiResultatsClassement {
+  background-color: #efefef;
+  padding: 20px 20px 0;
+}
+
+#multiResultatsClassement .cadre {
+  border: none;
+  padding: 0;
+}
+
+#multiResultatsClassement .cadre .menu {
+  margin: 0;
+}
+
+.titreCadre {
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  border: none;
+  font-size: 24px;
+  font-weight: normal;
+  color: #333;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+/* Liste des items*/
+
+#multiResultatsClassement .titreMenu {
+  display: none;
+}
+
+#multiResultatsClassement .titreMenu.couleur2 {
+  display: block;
+}
+
+#multiResultatsClassement div.menu div.titreMenu {
+  font-size: 13px;
+  font-weight: bold;
+  border-top: none;
+  border-bottom: none;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+#multiResultatsClassement div.menu div.enfantsMenu {
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* onglets */
+
+#multiResultatsClassement div.resultatsClassement div.retour {
+  margin-bottom: 40px;
+  border-bottom: none;
+  border-top: none;
+  font-size: 11px;
+  text-align: left;
+  cursor: pointer;
+}
+
+#multiResultatsClassement div.resultatsClassement div.retour:hover {
+  color: #b40015;
+}
+
+#multiResultatsClassement div.resultatsClassement div.retour:before {
+  content: "< ";
+}
+
+#multiResultatsClassement div.resultatsClassement {
+  margin: 0;
+}
+
+#multiResultatsClassement div.resultatsClassement ul.wEnteteTabs {
+  padding: 0 0 10px;
+}
+
+#multiResultatsClassement div.resultatsClassement ul.wEnteteTabs li {
+  border-bottom: 1px solid #d4d4d4;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 5px 2px;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+#multiResultatsClassement div.resultatsClassement ul.wEnteteTabs li:hover {
+  text-decoration: none;
+  color: #b40015;
+}
+
+#multiResultatsClassement div.resultatsClassement ul.wEnteteTabs li.selected {
+  color: #b40015;
+  border-bottom: 2px solid #b40015;
+  font-weight: bold;
+}
+
+/* partie onglet - résultats*/
+
+.resultatsClassement {
+  position: relative;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wTitreChamp {
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#multiResultatsClassement div.resultatsClassement table.resultats tr.dateRencontre:first-of-type td {
+  padding-top: 0;
+}
+
+#multiResultatsClassement div.resultatsClassement table.resultats tr.dateRencontre td {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #878787;
+  text-align: center;
+}
+
+#multiResultatsClassement div.resultatsClassement table.resultats tr.rencontre td {
+  padding: 4px 0 4px 0px;
+  font-size: 13px;
+}
+
+#multiResultatsClassement div.resultatsClassement table.resultats tr.rencontre td span.locale {
+  font-weight: normal;
+}
+
+#multiResultatsClassement div.resultatsClassement table.resultats tr.rencontre td.score {
+  font-size: 15px;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination {
+  padding-top: 10px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination select.selectJournee {
+  border: 1px solid #d4d4d4;
+  color: #666666;
+  float: left;
+  font-size: 13px;
+  margin: 0 40px 0 40px;
+  padding: 5px 2px;
+  width: calc(100% - 80px);
+  background: #f6f7fa;
+  text-align: center;
+  border-radius: 0;
+  height: 30px;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination select.selectJournee option {
+  text-align: center;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination a.fleche {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  float: none;
+  position: absolute;
+  margin: 0;
+  background: none;
+  text-align: center;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination a.fleche:hover {
+  background: none;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination a.fleche:hover:before {
+  color: #b40015;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination a.prec {
+  left: 0;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination a.prec:before {
+  content: "<";
+  font-size: 15px;
+  line-height: 30px;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination a.suiv {
+  right: 0;
+}
+
+#multiResultatsClassement div.resultatsClassement div.wPagination a.suiv:before {
+  content: ">";
+  font-size: 15px;
+  line-height: 30px;
+}
+
+/* onglet classement*/
+
+.wTitreChamp span {
+  display: none;
+}
+
+#multiResultatsClassement div.resultatsClassement table.classement th.position {
+  visibility: hidden;
+}
+
+#multiResultatsClassement div.resultatsClassement table.classement tr.locale {
+  background: none;
+}
+
+table.resultats td, table.classement td {
+  vertical-align: top;
+}
+
+#multiResultatsClassement div.resultatsClassement table.classement tr.classement td {
+  padding: 4px 0px 4px 8px;
+  font-size: 13px;
+  text-align: right;
+}
+
+#multiResultatsClassement div.resultatsClassement table.classement tr.classement td span.locale {
+  font-weight: normal;
+}
+
+#multiResultatsClassement div.resultatsClassement table.classement tr.classement td.position {
+  font-weight: bold;
+  text-align: right;
+}
+
+#multiResultatsClassement div.resultatsClassement table.classement tr.classement td.fondPromus, #multiResultatsClassement div.resultatsClassement table.classement tr.classement td.fondQualif, #multiResultatsClassement div.resultatsClassement table.classement tr.classement td.fondRelegues {
+  background: none;
+}
+
+/*
+.titreMenu {
+  display: none;
+}
+.menu div:nth-of-type(4) {
+  display: block;
+}
+*/

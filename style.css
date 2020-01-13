@@ -1,0 +1,237 @@
+body{
+    margin:0px;
+    font-family: 'Judson', serif;
+}
+header{
+    width: 100%;
+    height: 40px;
+    background-color: #192437;
+}
+
+#header1 img{
+    color: white;
+}
+
+/*image macareux*/
+#presentation img{
+    width: 95px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+#presentation ul{
+    display: flex;
+    list-style-type:none;
+}
+
+#presentation li{
+    padding: 10px;
+    
+}
+
+#presentation ul li a{
+    text-decoration:none;
+    color: #192437;
+    font-size: 20px;
+}
+
+#presentation ul li a:hover{
+    color: rgb(224, 41, 41);
+    text-decoration: underline;
+
+}
+
+#header1 h1{
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+    
+}
+
+
+#presentation{
+    color: #192437;
+    margin-top: 20px;
+}
+/*P.huybrechts*/
+h2{
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+h3{
+    font-size: 17px;
+    padding-top: 1px;
+}
+#presentation button{
+background-color: #192437;
+color: white;
+font-size: 15px;
+padding: 10px;
+border-radius: 5px;
+border: solid 1px  #192437;
+float: right;
+}
+
+#osteo{
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/osteo.jpg);
+    margin-top: 30px;
+}
+
+#osteo h1{
+    position: relative;
+    color: rgb(238, 237, 237);
+    padding-top: 40px;
+}
+
+#osteo p{
+    margin-top: 20px;
+    font-size: 18px;
+    float: left;
+    color: white;
+}
+
+/*"pour qui"*/
+h4{
+    font-weight: bold;
+    color:#192437;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#rdv h4{
+    font-weight: bold;
+    color: rgb(238, 237, 237);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#pourQui{
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+
+#pourQui button{
+    width: 200px;
+    background-color: #192437;
+    border-radius: 3px;
+    border: solid 1px #192437;
+}
+
+
+
+#pourQui p{
+    font-size: 15px;
+}
+
+#pourQui img{
+    border-radius: 4px;
+}
+
+#pourQui img:hover{
+    border: 4px solid #192437;
+}
+
+.col-xs-2 {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+#pourQui h5{
+    text-align: center;
+    font-size: 16px;
+    color: rgb(238, 237, 237);
+}
+
+/*trait*/
+hr{
+    
+    width: 90%;
+    height: 2px;
+    background-color:#142657;
+    border: none; /*on supprime le style par défaut*/
+    margin-bottom: 30px;
+}
+
+#infos{
+    margin-bottom: 50px;
+    
+}
+
+#infos h4{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#infos h5{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration:none;
+    color: #192437;
+
+}
+
+#infos p{
+    font-size: 18px;
+}
+
+
+
+h6{
+    color: rgb(238, 237, 237);
+    font-weight: bold;
+    text-align: center;
+}
+
+.bloc_horaires h6{
+    color: #192437;
+    
+}
+
+#rdv .bloc_rdv{
+    background-color: #192437;
+    border-radius: 3px;
+}
+
+#rdv .bloc_horaires{
+    margin-top: 40px;
+    background-color: rgb(238, 237, 237);
+    border-radius: 3px;
+}
+
+li{
+    list-style-type: none;
+    font-weight: bold;
+}
+
+iframe{
+    border-radius: 3px;
+}
+
+footer{
+    background-color: #192437;
+    height: 100%;
+    margin-top: 40px;
+}
+
+#infosFooter{
+    color: whitesmoke;
+    text-align: center;
+}
+
+#infosFooter .col{
+    margin-top: 10px;
+}
+
+#infosFooter .google img {
+    border-radius: 100px;
+}
+
+#infosFooter .google p{
+    font-size: 10px;;
+}

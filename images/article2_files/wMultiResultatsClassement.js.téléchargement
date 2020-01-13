@@ -1,0 +1,70 @@
+$(window).load(function(){
+	wEventsMultiResultatsClassement();
+	
+	notifyHeightFrame();
+});
+function mettreEnPage(){}
+function wEventsMultiResultatsClassement(){
+	$('#multiResultatsClassement a.lienPoule').click(wChargerLienPouleMultiResultatsClassement);
+}
+function wGetParametresMultiResultatsClassement(idMenu,indexTab,numJournee){
+	$('#idMenu').val(idMenu);
+	$('#numJournee').val(numJournee);
+	return 'edi='+$('#idEdition').val()+'&idm='+idMenu+'&tab='+indexTab+'&jou='+numJournee;
+}
+function wChargerLienPouleMultiResultatsClassement(){
+	wChargerPouleMultiResultatsClassement($(this).attr('name'),0,-1);
+}
+function wChargerTabMultiResultatsClassement(indexTab){
+	wChargerPouleMultiResultatsClassement($('#idMenu').val(),indexTab,$('#numJournee').val());
+}
+function wChargerJournee(){
+	var numJournee=$('#wSelectionJournee option:selected').val();
+	wChargerPouleMultiResultatsClassement($('#idMenu').val(),0,numJournee);
+}
+function wChargerPouleMultiResultatsClassement(idMenu,indexTab,jou){
+	$.ajax({
+		type: 'get',
+		url: 'wMultiResultatsClassement',
+		data: 'ajax=chargerPoule&'+wGetParametresMultiResultatsClassement(idMenu,indexTab,jou),
+		success: wChargerPouleMultiResultatsClassement_resp,
+		error: sessionInvalide
+	});
+}
+function wChargerPouleMultiResultatsClassement_resp(xml){
+	var err=setBR(getChildValXml(xml,'erreur'));
+	if(err!='') erreurAjax(err);
+	else {
+		var data=getChildValXml(xml,'data');
+		$('#multiResultatsClassement div.resultatsClassement').html(data);
+		wEventsMultiResultatsClassementEntetePied();
+		if (!isShowMultiResultatsClassement()) wToggleMultiResultatsClassement();
+		
+		notifyHeightFrame();
+	}
+}
+function isShowMultiResultatsClassement(){
+	return ($('#multiResultatsClassement div.resultatsClassement').css('display')!='none');
+}
+function wToggleMultiResultatsClassement(){
+	$('#multiResultatsClassement div.menu').toggle();
+	$('#multiResultatsClassement div.resultatsClassement').toggle();
+	
+	notifyHeightFrame();
+}
+function wEventsMultiResultatsClassementEntetePied(){
+	$('#multiResultatsClassementRetour').click(wToggleMultiResultatsClassement);
+	$('#wTabResultats').click(function (){wChargerTabMultiResultatsClassement(0);});
+	$('#wTabClassement').click(function (){wChargerTabMultiResultatsClassement(1);});
+	
+	$('#wSelectionJournee').attr('autocomplete','off').change(wChargerJournee).keyup(wChargerJournee);
+	$('#wFlechePrec').click(function() {wIncJournee(-1);});
+	$('#wFlecheSuiv').click(function() {wIncJournee(1);});
+}
+function wIncJournee(n){
+	var el;
+	if (n>0) el=$('#wSelectionJournee option:selected').next();
+	else el=$('#wSelectionJournee option:selected').prev();
+	if (!el.is('[value]')) el=$('#wSelectionJournee option:selected');
+	$('#wSelectionJournee').val(el.attr('value')).change();
+}

@@ -1,0 +1,16 @@
+(function(){(function(){
+  	var _classe = 'commune-selected';
+    var _etoile = '<span class="icon icon-etoile"></span>';
+  	var _dom_liste = document.querySelector('[data-oflistecommunesinsee]');
+    if(!_dom_liste) return;
+    var _liste = JSON.parse(_dom_liste.getAttribute('data-oflistecommunesinsee'));
+
+    _dom_liste.querySelectorAll('[data-ofclassinsee]').forEach(function(el){
+        var _insee = el.getAttribute('data-ofclassinsee');
+        if(_liste.indexOf(_insee) !== -1) {
+            el.classList.add(_classe);
+            el.querySelector('a').innerHTML += _etoile;
+        }
+    });
+})();
+}());

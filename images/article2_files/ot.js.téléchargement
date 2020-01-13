@@ -1,0 +1,35 @@
+
+(function(){
+	var omnitagResults = /*OMNITAG*/[[{"Disabled":false,"Visitor":"2c225e0d0909bc1b2e8f6a9879eb921a","IsUniqueVisitor":false,"Attempt":"a6b2e1643c42d3da4ae35fc528aec903","ApiPrefix":"https://fo-api.omnitagjs.com/fo-api","TrackingPrefix":"https://tracking.omnitagjs.com/tracking","DynamicPrefix":"https://tag-dyn.omnitagjs.com/fo-dyn","StaticPrefix":"https://fo-static.omnitagjs.com/fo-static","BlobPrefix":"https://fo-api.omnitagjs.com/fo-api/blobs","SspPrefix":"https://fo-ssp.omnitagjs.com/fo-ssp","VisitorPrefix":"https://visitor.omnitagjs.com/visitor","Device":"DESKTOP","Trusted":true,"Placement":"4ae35fc528aec903ae5ddd5d86bdbc3a","PlacementName":"OF_RG_Topic_DT_brique_AVR - Article_300x250 InAD","PlacementAccess":"ALL","Site":"8eb1796f735eb37ccf647cc2abdb517b","PlacementPassbacks":[{"Kind":"PUBLISHER","Data":"\u003cscript type=\"text/javascript\"\u003e var id_emplacement = 'pub_brique'; console.info('collapse init','a'); var div_cible=document.getElementById(id_emplacement); div_cible.style.display = 'none'; console.log(\"Collapse \" + id_emplacement);\u003c/script\u003e","Selector":""}],"OnEvents":null,"Lang":"FR","SiteLogo":null,"HasCloseButton":true,"HasCredit":true,"HasLegal":true,"HasSponsorImage":true,"ResizeIframe":false,"IntegrationConfig":{"Kind":"TEMPLATE","Template":{"ExtraStyleSheet":"","Placeholders":{"Description":{"Length":250},"Image":{"Width":300,"Height":150,"Lowres":false,"Raw":false}},"Selector":{"Kind":"CSS","Css":"#pub_brique"},"Insertion":"PREPEND","ClickFormat":true,"Creative20":false,"Html":"\u003cdiv id=\"{{uid}}\" style=\"position:relative;cursor:pointer;\"\u003e \u003cimg src=\"{{image}}\" class=\"image\"/\u003e \u003ca nohref class=\"cta\"\u003e{{calltoaction}}\u003c/a\u003e \u003cdiv id=\"ad-infos\"\u003e \u003ch3 class=\"title\"\u003e{{title}} \u003c/h3\u003e \u003cp class=\"desc\"\u003e{{description}} \u003c/p\u003e \u003cspan class=\"sponsor\"\u003e{{sponsor}}\u003c/span\u003e \u003c/div\u003e \u003cspan class=\"legal\"\u003e{{legal}}\u003c/span\u003e \u003cdiv style=\"clear:both\"\u003e \u003c/div\u003e\u003c/div\u003e","StyleSheet":"img.ayl_optout_button{z-index:1!important;}\n\n#{{uid}} {\n  background:#e5e5e5;\n  width:300px;\n  height:250px;\n  margin:10px auto;\n  font-family: Arial,Helvetica,sans-serif !important;\n  overflow:hidden;\n  color:#333;\n  border:1px solid #d4d4d4;\n  text-align:left;\n  -moz-transition:all .5s ease-in-out;\n  -webkit-transition:all .5s ease-in-out;\n  -o-transition:all .5s ease-in-out;\n  transition:all .5s ease-in-out;\n}\n\n#{{uid}} .legal{\n      font-weight: normal;\n    font-size: 11px;\n    position: absolute;\n    left: 0;\n    top: 0;\n    color: #fff;\n    background-color: #393939;\n    text-transform: uppercase;\n    text-align: left;\n    padding: 2px 3px;\n}\n\n\n\n\n\n#{{uid}} .image{\n  width:100%;\n  margin-right:10px;\n}\n\n#{{uid}} .title{\n  font-family:Arial,Helvetica,sans-serif !important;\n  font-weight:600 !important;\n  background:none !important;\n  max-width: 90%;\n  margin:0 10px;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  font-size:15px;\n  text-align:left;\n}\n\n#{{uid}} #ad-infos{\n  width:100%;\n  line-height:initial;\n  \n}\n\n#{{uid}} .cta{\n  display:none;\n  bottom:100px;\n  text-decoration:none;\n  background-color: #206DA0;\n    padding: 5px;\n    font-size: 12px;\n    color: #fff;\n  position:absolute;\n  right:0px;\n  -moz-transition:all .5s ease-in-out;\n  -webkit-transition:all .5s ease-in-out;\n  -o-transition:all .5s ease-in-out;\n  transition:all .5s ease-in-out;\n}\n\n#{{uid}} .desc{\n  font-size:11px;\n  margin: 0;\n  padding: 0 1em;\n  text-align:left;\n  line-height:initial;\n}\n\n\n\n#{{uid}} .sponsor{\n position:absolute;\n right:5px;\n bottom:2px;\n  font-size:10px;\n}\n\n"}},"IntegrationDeletable":false,"Legal":"Publicité","ForcedCampaign":"","ForcedTrack":"","ForcedCreative":"","ForcedSource":"","Campaign":"e2a82912438eaa7d2f234f778f82c274","CampaignName":"SSP- Concurrence","CampaignAccess":"ALL","CampaignKind":"AD_TRAFFIC","IsLocal":false,"DataSource":"SSP","DataSourceUrl":"","DataSourceOnEventsIsolated":false,"DataSourceWithoutCookie":false,"Content":{"Landing":{"ForbidIframe":false,"LegacyTracking":false},"InternalContentFields":{"AnimatedImage":false}},"OpenerDeletable":true,"OpenerDisallowPopin":false,"Opener":"REDIRECT","PerformUITriggers":["CLICK"],"RedirectionTarget":"TAB","HasNoSound":false}]]/*OMNITAG*/;
+
+	var insertAds = function insertAds() {
+		if (window.AylTag) {
+			window.AylTag.Insert(omnitagResults);
+		}
+		document.removeEventListener('ayl:tag_loaded', insertAds);
+	};
+
+	if (!window.AylTag) {
+		// Listen to load
+		document.addEventListener('ayl:tag_loaded', insertAds);
+
+		// Load script if not already loading
+		if (!window.AylTagLoading) {
+			window.AylTagLoading = true;
+
+			var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.crossOrigin = "anonymous"; sc.async = "true";
+			sc.src = 'https://fo-static.omnitagjs.com/ot_multi_template.js';
+			sc.className = 'ayl-injected-element';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+
+			sc.addEventListener('load', function() {
+				var evt  = document.createEvent('Event');
+				evt.initEvent('ayl:tag_loaded', true, true);
+				document.dispatchEvent(evt);
+				window.AylTagLoading = false;
+			});
+		}
+	} else {
+		insertAds();
+	}
+})();
