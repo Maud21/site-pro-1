@@ -1,1 +1,0 @@
-DCInfosCallback({"country":"FR","region":"","city":"","latitude":48.8582,"longitude":2.3387,"postal_code":null,"browser":"Google Chrome","ip":"90.8.203.250","traffic":null})
