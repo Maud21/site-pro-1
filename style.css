@@ -1,5 +1,5 @@
 body{
-    margin:0px;
+    margin:0;
     font-family: 'Judson', serif;
 }
 header{
@@ -8,16 +8,30 @@ header{
     background-color: #192437;
 }
 
-#header1 img{
+#header1 h1{
+    font-size: 16px;
     color: white;
+    margin-top: 10px;
+    
+    
 }
+
+#header1 .drapeau img{
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
 
 /*image macareux*/
 #presentation img{
     width: 95px;
     height: 90px;
-    border-radius: 100%;
+    border-radius: 20px;
+    margin-top: 2px;
+    margin-left: 0;
 }
+
 
 #presentation ul{
     display: flex;
@@ -41,36 +55,37 @@ header{
 
 }
 
-#header1 h1{
-    font-size: 16px;
-    color: white;
-    margin-top: 10px;
-    
-}
+
 
 
 #presentation{
     color: #192437;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 /*P.huybrechts*/
 h2{
     font-size: 25px;
     font-weight: bold;
-    padding-top: 5px;
+    text-align: center;
 }
 h3{
-    font-size: 17px;
-    padding-top: 1px;
+    font-size: 18px;
+    text-align: center;
 }
 #presentation button{
 background-color: #192437;
 color: white;
-font-size: 15px;
+font-size: 18px;
 padding: 10px;
 border-radius: 5px;
 border: solid 1px  #192437;
 float: right;
+
+}
+
+#presentation button:hover{
+    background-color:  rgb(224, 41, 41);
+    border: solid 3px  #192437;
 }
 
 #osteo{
@@ -79,7 +94,8 @@ float: right;
     background-size: cover;
     background-position: center;
     background-image: url(images/osteo.jpg);
-    margin-top: 30px;
+    margin-top: 10px;
+    text-align: justify;
 }
 
 #osteo h1{
@@ -88,11 +104,18 @@ float: right;
     padding-top: 40px;
 }
 
+#osteo img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
 #osteo p{
     margin-top: 20px;
     font-size: 18px;
     float: left;
     color: white;
+    
 }
 
 /*"pour qui"*/
@@ -111,7 +134,7 @@ h4{
 }
 
 #pourQui{
-    margin-top: 70px;
+    margin-top: 80px;
     margin-bottom: 60px;
 }
 
@@ -126,26 +149,47 @@ h4{
 
 
 #pourQui p{
-    font-size: 15px;
+    font-size: 18px;
+}
+
+#pourQui span{
+    font-weight: bold;
 }
 
 #pourQui img{
     border-radius: 4px;
+
 }
 
 #pourQui img:hover{
     border: 4px solid #192437;
 }
 
-.col-xs-2 {
+.col-sm-2 {
     margin-left: 20px;
     margin-bottom: 30px;
 }
 
+#pourQui h4{
+    font-size: 22px;
+    float: left;
+}
+
 #pourQui h5{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(238, 237, 237);
+}
+
+#pourQui .plus{
     text-align: center;
     font-size: 16px;
     color: rgb(238, 237, 237);
+}
+
+#pourQui .close img{
+    width: 20px;
+    height: 20px;
 }
 
 /*trait*/
@@ -159,8 +203,13 @@ hr{
 }
 
 #infos{
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     
+}
+
+#infos .infos_logo{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #infos h4{
@@ -173,11 +222,18 @@ hr{
     font-weight: bold;
     text-decoration:none;
     color: #192437;
+    text-align: center;
 
+}
+
+#infos .deroulement{
+    text-align: center;
 }
 
 #infos p{
     font-size: 18px;
+    text-decoration:none;
+    color: black;
 }
 
 
@@ -202,11 +258,24 @@ h6{
     margin-top: 40px;
     background-color: rgb(238, 237, 237);
     border-radius: 3px;
+    padding-top: 10px; 
+    padding-bottom: 10px;
 }
 
-li{
+#rdv ul, li{
     list-style-type: none;
     font-weight: bold;
+}
+
+#rdv .bloc_st-malo{
+    text-align: center;
+    margin-top: 15px;
+}
+
+#rdv .st-malo{
+    width: 255px;
+    height: 130px;
+    border-radius: 5px;
 }
 
 iframe{
@@ -221,11 +290,12 @@ footer{
 
 #infosFooter{
     color: whitesmoke;
-    text-align: center;
+    
 }
 
-#infosFooter .col{
+#infosFooter .col-sm-3{
     margin-top: 10px;
+    text-align: center;
 }
 
 #infosFooter .google img {
@@ -235,3 +305,65 @@ footer{
 #infosFooter .google p{
     font-size: 10px;;
 }
+
+@media all and (max-width: 1024px)
+{
+    body
+    {
+        width: auto;
+    }
+}
+
+/*responvive*/
+@media only screen and (max-width: 1000px) {
+    
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+      text-align: center;
+    }
+    header{
+        height: 50px;
+    }
+    #header1 .drapeau img{
+        display: none;
+    }
+
+    #presentation img{
+        display: none;
+    }
+    #presentation h2{
+        font-size: 27px;
+        margin-left: 2px;
+    }
+    #presentation ul{
+        display: unset;
+        
+    }
+    #presentation li{
+        padding: 2px;
+        
+    }
+    #presentation ul li a{
+        font-size: 16px;
+    }
+
+    #presentation button{
+        text-align: center;
+        float: none;
+    }
+
+    
+    #rdv h6{
+        text-align: center;
+    }
+    #rdv .bloc_st-malo{
+       display: none;
+    }
+    iframe{
+        width: 455px;
+        height: 250px;
+        margin-top: 30px;
+    }    
+}
+
